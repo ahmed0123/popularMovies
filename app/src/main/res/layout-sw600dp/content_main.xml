@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:orientation="horizontal"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              tools:context=".activities.MainActivity"
+              tools:showIn="@layout/activity_main" >
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.demo.mody.popularmovies.fragments.MainFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        tools:layout="@layout/fragment_main" />
+
+    <FrameLayout
+        android:id="@+id/frame_detailsFragment"
+        android:name="com.demo.mody.popularmovies.fragments.DetailsFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:visibility="gone"
+        tools:layout="@layout/fragment_details" />
+
+</LinearLayout >

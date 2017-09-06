@@ -1,0 +1,184 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              tools:context=".fragments.DetailsFragment"
+              tools:showIn="@layout/activity_details" >
+
+    <ProgressBar
+        android:id="@+id/progressBar_detailsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="true" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScroll_detailsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:focusable="true" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Overview"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                        android:id="@+id/txt_detailsFragment_overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout >
+
+            </android.support.v7.widget.CardView >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:id="@+id/txt_detailsFragment_titleDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Details"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <ImageView
+                        android:id="@+id/img_detailsFragment_poster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_detailsFragment_titleDetails" />
+
+                    <TextView
+                        android:id="@+id/txt_detailsFragment_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_detailsFragment_titleDetails"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@+id/img_detailsFragment_poster"
+                        android:layout_toRightOf="@+id/img_detailsFragment_poster"
+                        android:text="Year" />
+
+                    <TextView
+                        android:id="@+id/txt_detailsFragment_runTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txt_detailsFragment_year"
+                        android:layout_alignStart="@+id/txt_detailsFragment_year"
+                        android:layout_below="@+id/txt_detailsFragment_year"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/txt_detailsFragment_runTime" />
+
+                    <TextView
+                        android:id="@+id/txt_detailsFragment_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txt_detailsFragment_year"
+                        android:layout_alignStart="@+id/txt_detailsFragment_year"
+                        android:layout_below="@+id/txt_detailsFragment_runTime"
+                        android:text="@string/txt_detailsFragment_rate" />
+
+                </RelativeLayout >
+
+            </android.support.v7.widget.CardView >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Trailers"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recView_detailsFragment_videos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout >
+
+            </android.support.v7.widget.CardView >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                    android:orientation="vertical"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Reviews"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recView_detailsFragment_reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout >
+
+            </android.support.v7.widget.CardView >
+
+        </LinearLayout >
+
+    </android.support.v4.widget.NestedScrollView >
+
+</LinearLayout >
